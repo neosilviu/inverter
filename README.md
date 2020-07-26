@@ -1,3 +1,2 @@
 # inverter
-cmake 
-make
+sudo cmake . & make .
