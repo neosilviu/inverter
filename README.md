@@ -1,4 +1,5 @@
 # inverter
+sudo apt-get install mosquitto-clients
 sudo cmake . & make .
 
 
