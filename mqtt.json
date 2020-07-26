@@ -1,0 +1,8 @@
+{
+    "server": "192.168.2.3",
+    "port": "1883",
+    "topic": "homeassistant",
+    "devicename": "voltronic",
+    "username": "mqqt",
+    "password": "Alina.1980"
+}
