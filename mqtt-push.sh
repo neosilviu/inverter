@@ -2,12 +2,12 @@
 
 pushMQTTData () {
 
-    MQTT_SERVER=`cat /home/hass/inverter/mqtt.json | jq '.server' -r`
-    MQTT_PORT=`cat /home/hass/inverter/mqtt.json | jq '.port' -r`
-    MQTT_TOPIC=`cat /home/hass/inverter/mqtt.json | jq '.topic' -r`
-    MQTT_DEVICENAME=`cat /home/hass/inverter/mqtt.json | jq '.devicename' -r`
-    MQTT_USERNAME=`cat /home/hass/inverter/mqtt.json | jq '.username' -r`
-    MQTT_PASSWORD=`cat /home/hass/inverter/mqtt.json | jq '.password' -r`
+    MQTT_SERVER=`cat ~/inverter/mqtt.json | jq '.server' -r`
+    MQTT_PORT=`cat ~/inverter/mqtt.json | jq '.port' -r`
+    MQTT_TOPIC=`cat ~/inverter/mqtt.json | jq '.topic' -r`
+    MQTT_DEVICENAME=`cat ~/inverter/mqtt.json | jq '.devicename' -r`
+    MQTT_USERNAME=`cat ~/inverter/mqtt.json | jq '.username' -r`
+    MQTT_PASSWORD=`cat ~/inverter/mqtt.json | jq '.password' -r`
 
     mosquitto_pub \
         -h $MQTT_SERVER \
@@ -18,7 +18,7 @@ pushMQTTData () {
         -m "$2"
 }
 
-INVERTER_DATA=`timeout 10 /home/hass/inverter/cli/inverter_poller -1`
+INVERTER_DATA=`timeout 10 ~/inverter/cli/inverter_poller -1`
 
 #####################################################################################
 
